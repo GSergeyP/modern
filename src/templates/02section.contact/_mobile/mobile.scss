@@ -1,0 +1,29 @@
+@import "../../../static/scss/variables.scss";
+@import "../../../static/scss/mixin.scss";
+
+.contact-block {
+  @include block (0vw, 0vw, 100vw, 63.75vw) {
+    background-image: url("../../../src/static/img/general/02section.contact/bgMobile1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+.contact-block__h1 {
+  @include fonts (Arial, 6.1vw, normal, 700, normal, $primary);
+  position: relative;
+  top: 8.8vw;
+  left: 29.4vw;
+  margin: 0;
+  padding: 0;
+}
+.contact-block__icon {
+  @include icon (1.6vw, 47vw, 6vw, 23vw);
+  transform: rotate(90deg);
+}
+.contact-block__p {
+  @include block (-11.6vw, 2.45vw, 95vw,  null) {
+    padding-bottom: 0.8vw;
+    text-align: center;
+  }
+  @include fonts (Arial, 4.38vw, normal, 400, normal, $primary);  
+}

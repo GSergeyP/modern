@@ -1,0 +1,149 @@
+@import "../../../static/scss/variables.scss";
+@import "../../../static/scss/mixin.scss";
+
+.form-block {
+  @include block (0vw, 0vw, 100vw, 32.47vw);
+}
+.form-block__h2 {
+  @include block (3vw, 14.6vw, 20vw, null);
+  @include fonts (Arial, 1.2vw, normal, 700, normal, $fivefold);
+  padding: 0;
+  margin: 0;
+}
+.form-block__form {
+  display: flex;
+  flex-direction: column;
+}
+.form-block__span {
+  @include block (6.25vw, 22.9vw, 27.9vw, 0.9vw) {
+    display: block;
+    border: 1px solid $sevenfold;
+    z-index: 1;
+  }
+  @include fonts (Arial, 0.86vw, normal, 400, normal, $sevenfold);
+  padding: 0.3vw;
+  & > label {
+    position: relative;
+  }
+  &.err {
+    border: 1px solid $sixtyfold;
+    color: $sixtyfold !important;
+  }
+  cursor: pointer;
+}
+.form-block__icon {
+  @include icon (4.65vw, 49.7vw, 1.7vw, 1vw) {
+    fill: $tertiary;
+  }
+  background-color: $eightfold;
+  padding: 0.3vw 0.03vw;
+}
+.form-block__icon.show {
+  transform: rotate(180deg);
+}
+.form-block__ul {
+  @include block (8.2vw, 22.9vw, 28.5vw, 11.5vw);
+  @include fonts (Arial, 1vw, normal, 400, 1.8vw, $primary); 
+  display: none;
+  padding: 0;
+  position: absolute;
+  border: 1px solid $sevenfold;
+  background-color: $tertiary;
+  z-index: 1;
+}
+.form-block__ul.show {
+  display: block;
+}
+.form-block__ul-li {
+  list-style-type: none;
+  padding-left: 0.3vw;
+  @media (hover) {
+    &:hover {
+      background-color: $fivefold;
+      color: $tertiary;
+    }
+  }
+  cursor: pointer;
+}
+.form-block__label {
+  display: inline-block;
+  @include block (3.2vw, 14.5vw, 20vw, null);
+  @include fonts (Arial, 1vw, normal, 400, normal, $primary);
+  padding-bottom: 1.5vw;
+  &.item {
+    padding: 0; 
+  }
+}
+.form-block__input {
+  @include block (1.9vw, 22.9vw, 27.8vw, 1.5vw);
+  @include fonts (Arial, 1vw, normal, 400, normal, $sevenfold); 
+  padding: 0 0.3vw;
+  margin: 0;
+  outline: none;
+  border: 1px solid $sevenfold;
+    &.item {
+    height: 6.65vw;
+    resize: none;
+  }
+  &::placeholder {
+    opacity: 0;
+  }
+  &:focus::placeholder{
+    opacity: 1;
+    color: $primary;
+  }
+  &:focus{
+    color: $primary;
+  }
+  &.err {
+    border: 1px solid $sixtyfold;
+  }
+}
+.form-block__signature {
+  @include block (3.3vw, 23vw, 10vw, null);
+  @include fonts (Arial, 0.84vw, normal, 400, normal, $sixtyfold); 
+}
+.form-block__button {
+  @include block (2.2vw, 43vw, 8.4vw, 2.7vw);
+  @include fonts (Arial, 0.84vw, normal, 700, normal, $tertiary); 
+  background-color: $fivefold;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+.form-block__p {
+  @include block (-18.5vw, 54.5vw, 31vw, null);
+  @include fonts (Arial, 0.94vw, normal, 400, normal, $primary); 
+  margin-bottom: 1.2vw;
+}
+////////////////////////////////////////////////////////////////
+.form-block__modal {
+  @include block (0vw, 0vw, 32.1vw, 11.5vw);
+  display: block;
+  position: fixed;
+  top:  60%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  z-index: 10;
+  background-color: $tertiary;
+}
+.form-block__modal-body {
+  @include block (0vw, 0vw, 26.5vw, 7.4vw);
+  display: block;
+  position: relative;
+  top:  50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color: $ninefold;
+  text-align: center;
+}
+.form-block__modal-body__icon {
+  @include icon (0vw, 13.9vw, 1.4vw, 1.4vw);
+  cursor: pointer;
+}
+.form-block__modal-body__h2 {
+  @include fonts (Arial, 1.14vw, normal, 700, normal, $sixtyfold); 
+}
+.form-block__modal-body__p {
+  @include fonts (Arial, 0.93vw, normal, 400, normal, $primary); 
+}

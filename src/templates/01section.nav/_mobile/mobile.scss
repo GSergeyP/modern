@@ -1,0 +1,24 @@
+@import "../../../static/scss/variables.scss";
+@import "../../../static/scss/mixin.scss";
+
+.nav-block {
+  @include block (0vw, 0vw, 100vw, 19vw) {
+  }
+}
+.nav-block__item1 {
+  @include icon (0.2vw, -2vw, 29.5vw, 10vw);
+}
+.nav-block__item2 {
+  @include icon (0.2vw, -6.6vw, 29.5vw, 10vw);
+}
+.nav-block__item3 {
+  @include icon (2vw, -35.7vw, 34vw, 14vw) {
+    fill: $twelvefold;
+  }
+}
+.nav-block__item4 {
+  @include icon (-11.5vw, 58.5vw, 29.5vw, 11vw);
+}
+.nav-block__item5 {
+  @include icon (-11.5vw, 45.2vw, 29.5vw, 11vw);
+}

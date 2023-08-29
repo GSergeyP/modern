@@ -1,0 +1,25 @@
+$primary:    #4D4D4D;
+$secondary:  #CFEFFF;
+$tertiary:   #FFFFFF;
+$quaternary: #E3EEFA;
+$fivefold:   #009EE8;
+$sixtyfold:  #EF5C53;
+$sevenfold:  #B3B3B3;
+$eightfold:  #0887CC;
+$ninefold:   #FFF3C4;
+$tenfold:    #262626;
+$elevenfold: rgba(250, 244, 240, 0.50);
+$twelvefold: #005898;
+
+// Шрифты
+@font-face {
+  font-family: 'Arial';
+  src:  url('../../static/fonts/ArialRegular.eot') format('eot'),
+        url('../../static/fonts/ArialRegular.ttf') format('truetype'),
+        url('../../static/fonts/ArialRegular.woff') format('woff');
+}
+// Устройства
+$mobile: 320px;
+$tablet: 768px;
+$hd: 1440px;
+//fill="#005898"

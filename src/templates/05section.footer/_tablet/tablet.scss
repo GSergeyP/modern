@@ -1,0 +1,72 @@
+@import "../../../static/scss/variables.scss";
+@import "../../../static/scss/mixin.scss";
+
+.footer-block {
+  @include block (0vw, 0vw, 100vw, 87.5vw);
+  background-image: url("../../../src/static/img/general/05section.footer/bgTablet2.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.footer-block__top {
+  @include block (0vw, 0vw, 100vw, 18.7vw);
+  border-bottom: 4px solid $tenfold;
+}
+.footer-block__top-icon1 {
+  @include icon (1.2vw, 2.9vw, 8.2vw, 5.3vw);
+}
+.footer-block__top-icon2 {
+  @include icon (1.65vw, 4.5vw, 15.1vw, 6.5vw);
+}
+.footer-block__top-icon3 {
+  @include icon (2.15vw, -10.8vw, 18.6vw, 7.7vw);
+  fill: $tertiary;
+}
+#footer-block__link {
+  @include block (-4.8vw, 60.5vw, 36vw, 5.5vw);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.footer-block__link {
+  @include fonts (Arial, 1.82vw, normal, 700, normal, $tertiary);
+  white-space: nowrap;
+  margin-left: 4.1vw;
+  margin-bottom: 1.6vw;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  @media (hover) {
+    &:hover {
+      border-bottom: 1px solid $tertiary;
+    }
+  }
+}
+.footer-block__top-p {
+  @include fonts (Arial, 1.82vw, normal, 400, 0.2vw, $tertiary);
+  @include block (-2.55vw, 2.85vw, 35vw, null);
+}
+.footer-block__top-h2 {
+  @include fonts (Arial, 2.34vw, normal, 700, normal, $tertiary);
+  @include block (-6.6vw, 67.6vw, 15vw, null);
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+.footer-block__top-icon4 {
+  @include icon (-9.6vw, 84vw, 3.3vw, 3.3vw);
+}
+.footer-block__top-icon5 {
+  @include icon (-9.6vw, 85.2vw, 3.3vw, 3.3vw);
+}
+.footer-block__top-icon6 {
+  @include icon (-9.6vw, 86.8vw, 3.3vw, 3.3vw);
+}
+.footer-block__bottom {
+  @include block (0vw, 0vw, 100vw, 68.8vw);
+  border-top: 1px solid $elevenfold;
+}
+.footer-block__bottom-p {
+  @include fonts (Arial, 1.83vw, normal, 400, normal, $tertiary);
+  @include block (0.6vw, 2.8vw, 94.5vw, null);
+  margin-bottom: 2.1vw;
+}

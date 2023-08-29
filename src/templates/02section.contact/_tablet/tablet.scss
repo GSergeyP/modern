@@ -1,0 +1,25 @@
+@import "../../../static/scss/variables.scss";
+@import "../../../static/scss/mixin.scss";
+
+.contact-block {
+  @include block (0vw, 0vw, 100vw, 20vw) {
+    background-image: url("../../../src/static/img/general/02section.contact/bgTablet1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+.contact-block__h1 {
+  @include fonts (Arial, 3vw, normal, 700, normal, $primary);
+  position: relative;
+  top: 8vw;
+  left: 3vw;
+  margin: 0;
+  padding: 0;
+}
+.contact-block__icon {
+  @include icon (-0.5vw, 24.3vw, 4vw, 13.9vw);
+}
+.contact-block__p {
+  @include block (-17vw, 29.1vw, 43vw, 14vw);
+  @include fonts (Arial, 2.08vw, normal, 400, 2.33vw, $primary);
+}

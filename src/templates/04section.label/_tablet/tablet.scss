@@ -1,0 +1,33 @@
+@import "../../../static/scss/variables.scss";
+@import "../../../static/scss/mixin.scss";
+
+.label-block {
+  @include block (0vw, 0vw, 100vw, 112.8vw);
+}
+.label-block__top {
+  @include block (0vw, 0vw, 100vw, 21.1vw);
+  background-color: $secondary;
+}
+.label-block__top-icon {
+  @include icon (3.65vw, 24.3vw, 50.7vw, 13.5vw);
+}
+.label-block__bottom {
+  @include block (0vw, 0vw, 100vw, 91.7vw);
+}
+.label-block__bottom-h2 {
+  @include block (4.9vw, 24.4vw, 55vw, null);
+  @include fonts (Arial, 2.8vw, normal, 700, normal, $primary);
+  margin: 0;
+  padding: 0;
+}
+.label-block__bottom-container {
+  @include block (10.3vw, 7.5vw, 84.5vw, 73vw);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 5.1vw;
+}
+.label-block__bottom-img {
+  width: 39.7vw;
+  height: 14.3vw;
+}

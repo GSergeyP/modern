@@ -1,0 +1,70 @@
+@import "../../../static/scss/variables.scss";
+@import "../../../static/scss/mixin.scss";
+
+.nav-block {
+  @include block (0vw, 0vw, 100vw, 5vw);
+}
+.nav-block__item1 {
+  @include icon (1.5vw, 10.7vw, 11vw, 2.2vw);
+}
+.nav-block__item2 {
+  @include icon (1.4vw, 5.1vw, 10.9vw, 2.1vw);
+}
+.nav-block__item3 {
+  @include icon (1.4vw, -5.1vw, 10.9vw, 2.1vw) {
+  fill: $twelvefold;
+  }
+}
+.nav-block__item4 {
+  @include icon (1.4vw, -6.3vw, 0.1vw, 2.1vw);
+}
+.nav-block__item5 {
+  @include icon (1.1vw, -6.4vw, 10.2vw, 1.7vw);
+}
+.nav-block__item6 {
+  @include button (0.6vw, 5vw, 13.5vw, 2vw) {
+    @include fonts (Arial, 0.8vw, normal, 700, 2vw, $primary);
+  }
+  .nav-block__item6-icon{
+    @include icon (0.3vw, 11.7vw, 3vw, 1.4vw) {
+      position: absolute;
+      pointer-events: none;
+      fill: $primary;
+    }
+  }
+}
+.nav-block__item7 {
+  @include button (0.6vw, 6.1vw, 6.8vw, 2vw) {
+    @include fonts (Arial, 0.8vw, normal, 700, 2vw, $primary);
+  }
+  .nav-block__item7-icon{
+    @include icon (0.3vw, 5.2vw, 3vw, 1.4vw){
+      position: absolute;
+      pointer-events: none;
+      fill: $primary;
+    }
+  }
+}
+.nav-block__input {
+  @include block (-1.15vw, 71.6vw, 13.7vw, 1.55vw) {
+  display: grid;
+  grid-template-columns: 11.7vw 2vw;
+  grid-template-rows: 1.55vw;
+  gap: 0;
+  border: 1px solid $sevenfold;
+  overflow: hidden;
+  }
+}
+.nav-block__input-input {
+  @include fonts (Arial, 0.8vw, normal, 700, 2vw, $primary);
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+}
+.nav-block__item8 {
+  @include icon (0, 0.3vw, 100%, 100%) {
+    z-index: 5;
+  cursor: pointer;
+  }
+}

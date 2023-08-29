@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form>
+    <input id="online_phone" name="phone" maxlength="15"
+        
+     
+           placeholder="X-XXX-XXX-XXXX"
+           autocomplete="off">
+  </form>
+
+  <script>
+    const setCursorPosition = (pos, e) => {
+      e.setSelectionRange(pos, pos);
+    }
+  
+    function mask(e) {
+      let matrix = this.placeholder,
+          i = 0,
+          val = this.value.replace(/\D/g, "");
+
+
+        
+      matrix = matrix.replace(/[X\d]/g, function(a) {
+        return val.charAt(i++) || "X"
+      });
+ 
+      this.value = matrix;
+
+      i = matrix.split('X')[0].length-1;
+
+      if (i < matrix.length && matrix != this.placeholder) i++ 
+      else i = matrix.indexOf("X");
+
+        setCursorPosition(i, this)
+    }
+
+
+
+
+
+
+
+
+    window.addEventListener("DOMContentLoaded", () => {
+      let input = document.querySelector('input[name="phone"]');
+      input.addEventListener("input", mask, false);
+      setCursorPosition(0, input);
+    });
+  </script>
+  <style>
+    input::placeholder{
+    opacity: 0;
+}
+input:focus::placeholder{
+    opacity: 1;
+}
+  </style>
+</body>
+</html>
